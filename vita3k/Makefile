@@ -13,7 +13,7 @@ include $(DEVKITARM)/ds_rules
 #---------------------------------------------------------------------------------
 TARGET       := $(shell basename $(CURDIR))
 BUILD        := build
-SOURCES      := . nitro/fs
+SOURCES      := . nitro nitro/fs
 
 VERSION      := 0.0.0
 GAME_TITLE   := Vita3K
