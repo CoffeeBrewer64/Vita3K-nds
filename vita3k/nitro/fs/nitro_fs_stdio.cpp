@@ -1,6 +1,11 @@
 #include <nitro/fs/nitro_fs_stdio.hpp>
 
-int main()
+namespace nitro
 {
-    return 0;
+namespace fs
+{
+
+
+
+}
 }
