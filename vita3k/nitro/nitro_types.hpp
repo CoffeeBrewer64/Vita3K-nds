@@ -24,7 +24,6 @@ enum OpenMode
 enum FileCompression
 {
     None,
-    LZ77,
     ZIP,
     _7Z,
     RAR
