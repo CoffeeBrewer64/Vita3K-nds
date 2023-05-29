@@ -24,7 +24,7 @@ struct DialogLangState
         { "cancel", "Cancel" },
         { "delete", "Delete" },
         { "file_corrupted", "The file is corrupt." },
-        { "microphone_disabled", "Enable the microphone." },
+        { "microphone_disabled", "Enable the microphone." }, // This shouldn't ever happen as the DS(i) microphone stays on all the time/is automatically enabled
         { "no", "No" },
         { "ok", "OK" },
         { "please_wait", "Please wait..." },
@@ -60,13 +60,13 @@ struct DialogLangState
         {
             { "title", "Save" },
             { "cancel_saving", "Do you want to cancel saving?" },
-            { "could_not_save", "Could not save the file.\nThere is not enough free space on the memory card." },
-            { "not_free_space", "There is not enough free space on the memory card." },
+            { "could_not_save", "Could not save the file.\nThere is not enough free space on the microSD card." },
+            { "not_free_space", "There is not enough free space on the microSD card." },
             { "new_saved_data", "New Saved Data" },
             { "saving_complete", "Saving complete." },
             { "save_the_data", "Do you want to save the data?" },
             { "saving", "Saving..." },
-            { "warning_saving", "Saving...\nDo not power off the system or close the application." },
+            { "warning_saving", "Saving...\nDo not power off or reset the DS(i)." },
             { "overwrite_saved_data", "Do you want to overwrite this saved data?" }
         };
     };
@@ -115,7 +115,7 @@ struct LangState
         std::map<std::string, std::string> controls =
         {
             { "title", "Controls" },
-            { "keyboard_controls", "Keyboard Controls" }
+            { "keyboard_controls", "DS(i) button controls" }
         };
         std::map<std::string, std::string> help =
         {
@@ -230,7 +230,7 @@ struct LangState
         { "connected", "{} controllers connected" },
         { "name", "Name" },
         { "num", "Num" },
-        { "not_connected", "No compatible controllers connected.\nConnect a controller that is compatible with SDL2." }
+        { "not_connected", "No compatible controllers connected.\nConnect a controller that is compatible with libnds." }
     };
     std::map<std::string, std::string> controls =
     {
@@ -311,7 +311,7 @@ struct LangState
     std::map<std::string, std::string> initial_setup =
     {
         { "back", "Back" },
-        { "completed_setup", "You have now completed initial setup.\nYour Vita3K system is ready!" },
+        { "completed_setup", "You have now completed initial setup.\nVita3K is now ready!" },
         { "select_language", "Select a language" },
         { "install_firmware", "Install Firmware." },
         { "install_highly_recommended", "Installing both firmware files is highly recommended." },
@@ -320,6 +320,7 @@ struct LangState
         { "download_font_package", "Download Font Package" },
         { "install_firmware_file", "Install Firmware File" },
         { "completed", "Completed." },
+        { "cannot_use_ds", "You must use a PC to download these files.\nThe DS(i) cannot download these files!" },
         { "next", "Next" }
     };
     struct InstallDialog
@@ -339,13 +340,9 @@ struct LangState
         {
             { "select_key_type", "Select key type" },
             { "select_work", "Select work.bin" },
-            { "enter_zrif", "Enter zRIF" },
-            { "enter_zrif_key", "Enter zRIF key" },
-            { "input_zrif", "Please input your zRIF here" },
-            { "copy_paste_zrif", "Ctrl (Cmd) + C to copy, Ctrl (Cmd) + V to paste." },
             { "delete_pkg", "Delete the pkg file?" },
             { "delete_work", "Delete the work.bin file?" },
-            { "failed_install_package", "Failed to install package.\nPlease check pkg and work.bin file or zRIF key." }
+            { "failed_install_package", "Failed to install package.\nPlease check pkg and work.bin file." }
         };
         std::map<std::string, std::string> archive_install =
         {
@@ -428,7 +425,7 @@ struct LangState
                 {
                     { "title", "Theme" },
                     { "search", "Search" },
-                    { "find_a_psvita_custom_themes", "Find a PSVita Custom Themes" },
+                    { "find_a_psvita_custom_themes", "Find a PSVita Custom Theme" },
                     { "delete", "This theme will be deleted." }
                 };
                 std::map<std::string, std::string> information =
@@ -557,9 +554,9 @@ struct LangState
     };
     std::map<std::string, std::string> welcome =
     {
-        { "title", "Welcome to Vita3K" },
-        { "line_first", "Vita3K PlayStation Vita Emulator" },
-        { "line_second", "Vita3K is an open-source PlayStation Vita emulator written in C++ for Windows, Linux, macOS and Android." },
+        { "title", "Welcome to Vita3K-nds" },
+        { "line_first", "Vita3K-nds PlayStation Vita Emulator for the NDS(i)" },
+        { "line_second", "Vita3K-nds is an open-source PlayStation Vita emulator written in C++ for the NDS(i) and is based upon Vita3K." },
         { "line_third", "The emulator is still in its development stages so any feedback and testing is greatly appreciated." },
         { "line_fourth", "To get started, please install the PS Vita firmware and font packages." },
         { "download_firmware", "Download Firmware" },
